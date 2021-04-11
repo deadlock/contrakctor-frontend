@@ -1,0 +1,40 @@
+@import "../../../assets/styles/colors";
+
+.search-contract-container {
+  box-shadow: 0 0 4px 0 rgba(0, 0, 0, 0.1);
+  height: 100%;
+  padding: 20px 0 24px 24px;
+  display: flex;
+  flex-direction: column;
+}
+
+.search-contract-title {
+  border-bottom: $secondary 1px solid;
+  color: $primary;
+  font-size: 16px;
+  height: 36px;
+  margin: 0 0 18px;
+  margin-right: 24px;
+  text-transform: uppercase;
+}
+
+.search-form {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  border-bottom: $secondary 1px solid;
+  padding-bottom: 10px;
+}
+
+.search-contract-form {
+  align-self: center;
+  width: 400px;
+  display: flex;
+  flex-direction: column;
+  height: 450px;
+  justify-content: space-between;
+}
+
+.button-container {
+  align-self: flex-end;
+}

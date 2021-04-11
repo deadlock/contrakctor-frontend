@@ -1,0 +1,35 @@
+@import "../../assets/styles/colors";
+
+.navbar-container {
+  align-items: center;
+  background-color: $primary;
+  display: flex;
+  flex-direction: column;
+  height: calc(100% - 76px);
+  position: absolute;
+  width: 48px;
+}
+
+.navbar-list {
+  display: inline;
+  padding: 0;
+}
+
+.navbar-list-item {
+  align-items: center;
+  display: flex;
+  height: 55px;
+  justify-content: center;
+  width: 44px;
+}
+
+.navbar-list-item-active {
+  background-color: #5abff5;
+  border-left: 4px solid #97d5fc;
+}
+
+.navlink-container {
+  align-items: center;
+  display: flex;
+  justify-content: center;
+}

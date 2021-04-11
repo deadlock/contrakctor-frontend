@@ -1,25 +1,33 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
+
+import { Parts } from "./screens/parts/register";
+import { PartSearch } from "./screens/parts/search";
+import { Contracts } from "./screens/contracts/register";
+import { ContractSearch } from "./screens/contracts/search";
+import { Associate } from "./screens/contracts/associate";
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Router>
+      <Switch>
+        <Route path="/search/contracts" component={ContractSearch} />
+      </Switch>
+      <Switch>
+        <Route path="/contracts" component={Contracts} exact />
+      </Switch>
+      <Switch>
+        <Route path="/search/parts" component={PartSearch} />
+      </Switch>
+      <Switch>
+        <Route path="/parts" component={Parts} exact />
+      </Switch>
+      <Switch>
+        <Route path="/associate" component={Associate} />
+      </Switch>
+      <Switch>
+        <Route path="/" component={Contracts} exact />
+      </Switch>
+    </Router>
   );
 }
 
